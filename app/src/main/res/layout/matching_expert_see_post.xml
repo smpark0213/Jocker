@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--toolbar-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/signup01_toolbar_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="게시물"
+                android:textColor="@color/mainGreen"
+                android:textSize="20sp">
+
+            </TextView>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/toolbar_bottom_boarder"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/whitegray"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginBottom="10dp"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이것은 제목입니다"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/postProfile"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="12dp"
+                            android:src="@drawable/ic_launcher_background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/postNickname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="nickname"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/postTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0월 0일 오후 0시 00분"
+                                android:textColor="@color/gray"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/see_post_location_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="지역명 | 지역명"
+                                android:textColor="@color/gray"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--실제 내용-->
+                    <LinearLayout
+                        android:id="@+id/see_post_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/see_post_imagecontainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whitegray"
+                        android:layout_marginVertical="5dp"/>
+
+                </LinearLayout>
+
+    <!--              이 버튼에 신청, 취소, 완료가 들어가는건 java에서 제어합니다.-->
+                <Button
+                    android:id="@+id/matching_expert_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="매칭 요청"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/all_button_bg_ripple_round_15_whiteborder"/>
+
+
+             </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

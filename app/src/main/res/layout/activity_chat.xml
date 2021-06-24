@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/opponentNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상대방 닉네임"
+            android:textColor="@color/mainGreen"
+            android:textSize="20sp">
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/toolbar_bottom_boarder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whitegray"
+        android:layout_below="@+id/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/messageToSend"
+        android:layout_below="@+id/toolbar_bottom_boarder">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/messageToSend"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/send_chatting_boarder">
+
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:id="@+id/messageArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="6"
+            android:hint="메시지를 입력해주세요..."
+            android:maxHeight="80dp"
+            android:textColor="#000000"
+            android:textColorHint="#797979"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_baseline_near_me_24"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>

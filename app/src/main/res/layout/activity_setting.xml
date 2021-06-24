@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <TextView
+            android:id="@+id/check_password_toolbar_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림설정"
+            android:textColor="@color/mainGreen"
+            android:textSize="20sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/toolbar_bottom_boarder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whitegray"
+        android:layout_below="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/myinfoText"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:text="내 정보 수정"
+        android:textColor="@color/black"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whitegray" />
+
+    <TextView
+        android:id="@+id/bellText"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:text="알림 설정"
+        android:textColor="@color/black"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whitegray" />
+
+    <TextView
+        android:id="@+id/logoutText"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:text="로그아웃"
+        android:textColor="@color/black"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whitegray" />
+
+</LinearLayout>

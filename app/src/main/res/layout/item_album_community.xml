@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/post_myinfo_card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:background="@drawable/post_myinfo_border"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:id="@+id/image"
+        android:padding="3dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="글 제목"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        android:paddingLeft="5dp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</LinearLayout>

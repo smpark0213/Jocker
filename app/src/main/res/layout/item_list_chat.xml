@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp" >
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="22dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <RelativeLayout
+        android:id="@+id/text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/profileImage" >
+
+        <TextView
+            android:id="@+id/roomName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="58dp"
+            android:text="상대방 이름"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/lastMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="70dp"
+            android:text="마지막 메시지"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_below="@+id/roomName"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <!-- 알림 켜진건 bell_on 이미지 쓰면 되고 꺼진건 bell_off 이미지 쓰면 된다! -->
+    <ImageView
+        android:id="@+id/bellButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/bell_on"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/toolbar_bottom_boarder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/whitegray" />
+
+</RelativeLayout>
